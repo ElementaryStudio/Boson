@@ -45,7 +45,7 @@
 
         public bool IsStable() => float.IsInfinity(_lifetime);
         public bool IsVector() => _spin.Numerator == 1;
-        public bool IsObserved() => _type != Graviton;
+        public bool IsObserved() => _type != BosonType.Graviton;
 
         #region IComparable, IComparable<Boson>, IEquatable<Boson>
 
