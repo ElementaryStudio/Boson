@@ -9,10 +9,6 @@
 
   <ItemGroup>
     <PackageReference Include="Elementary.Core" Version="0.2.16" />
-    <PackageReference Include="Ivy.Versioning" Version="3.0.0">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
 
   <PropertyGroup>
@@ -32,6 +28,12 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Gota-go-fast boson structures</Description>
   </PropertyGroup>
+  <ItemGroup Condition="$(Configuration) == 'Debug'">
+    <PackageReference Include="Ivy.Versioning" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
   <PropertyGroup Condition="$(Configuration) == 'Debug'">
     <BumpPatch>true</BumpPatch>
   </PropertyGroup>
